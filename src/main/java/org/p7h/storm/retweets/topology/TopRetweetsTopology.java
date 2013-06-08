@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 public final class TopRetweetsTopology {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TopRetweetsTopology.class);
 
-	public static void main(final String[] args) throws Exception {
+	public static final void main(final String[] args) throws Exception {
 		try {
 			final Config config = new Config();
 			config.setMessageTimeoutSecs(120);
@@ -29,11 +29,11 @@ public final class TopRetweetsTopology {
 
 			final TopologyBuilder topologyBuilder = new TopologyBuilder();
 			topologyBuilder.setSpout("twitterspout", new TwitterSpout());
-			//Create RetweetCountBolt with time for logging and count threshold of words.
-			topologyBuilder.setBolt("retweetcountbolt", new RetweetCountBolt(30, 100))
+			//Create Bolt with the frequency of logging [in seconds] and # of sorted [descending order] tweets to log.
+			topologyBuilder.setBolt("retweetcountbolt", new RetweetCountBolt(30, 10))
 					.shuffleGrouping("twitterspout");
 
-			//submit it to the cluster, or submit it locally
+			//Submit it to the cluster, or submit it locally
 			if (null != args && 0 < args.length) {
 				config.setNumWorkers(3);
 				StormSubmitter.submitTopology(args[0], config, topologyBuilder.createTopology());
@@ -41,7 +41,7 @@ public final class TopRetweetsTopology {
 				config.setMaxTaskParallelism(10);
 				final LocalCluster localCluster = new LocalCluster();
 				localCluster.submitTopology(Constants.TOPOLOGY_NAME, config, topologyBuilder.createTopology());
-				//Sleep for 120 seconds so that we can complete decent processing of tweets.
+				//Run this topology for 120 seconds so that we can complete decent processing of tweets.
 				Utils.sleep(120 * 1000);
 
 				LOGGER.info("Shutting down the cluster...");
@@ -49,13 +49,13 @@ public final class TopRetweetsTopology {
 				localCluster.shutdown();
 			}
 		} catch (final AlreadyAliveException | InvalidTopologyException exception) {
-			//Deliberate no op; not required actually.
-			//exception.printStackTrace();
+			//Deliberate no op;
+			exception.printStackTrace();
 		} catch (final Exception exception) {
-			//Deliberate no op; not required actually.
-			//exception.printStackTrace();
+			//Deliberate no op;
+			exception.printStackTrace();
 		}
-		LOGGER.info("\n\n\n\t\t*****Please clear your temp folder now!!!*****");
+		LOGGER.info("\n\n\n\t\t*****Please clean your temp folder \"{}\" now!!!*****", System.getProperty("java.io.tmpdir"));
 	}
 
 }

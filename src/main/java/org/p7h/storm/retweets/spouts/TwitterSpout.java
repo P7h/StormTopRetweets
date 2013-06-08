@@ -25,7 +25,7 @@ import twitter4j.conf.ConfigurationBuilder;
  */
 public final class TwitterSpout extends BaseRichSpout {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TwitterSpout.class);
-	private static final long serialVersionUID = -4702957435785029825L;
+	private static final long serialVersionUID = -1506848123321622185L;
 
 	private SpoutOutputCollector _collector;
     private LinkedBlockingQueue<Status> _queue;
@@ -63,23 +63,25 @@ public final class TwitterSpout extends BaseRichSpout {
 			public void onException(final Exception e) {
 			}
 		};
-		//twitter stream authentication setup
+		//Twitter stream authentication setup
 		final Properties properties = new Properties();
 		try {
 			properties.load(TwitterSpout.class.getClassLoader()
 					                .getResourceAsStream(Constants.CONFIG_PROPERTIES_FILE));
-		} catch (final IOException e) {
-			LOGGER.error(e.toString());
+		} catch (final IOException exception) {
+			//Should not occur. If it does, we cant continue. So exiting the program!
+			LOGGER.error(exception.toString());
+			System.exit(1);
 		}
 
-		final ConfigurationBuilder twitterConfBuilder = new ConfigurationBuilder();
-		twitterConfBuilder.setIncludeEntitiesEnabled(true);
+		final ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
+		configurationBuilder.setIncludeEntitiesEnabled(true);
 
-		twitterConfBuilder.setOAuthAccessToken(properties.getProperty(Constants.OATH_ACCESS_TOKEN));
-		twitterConfBuilder.setOAuthAccessTokenSecret(properties.getProperty(Constants.OATH_ACCESS_TOKEN_SECRET));
-		twitterConfBuilder.setOAuthConsumerKey(properties.getProperty(Constants.OATH_CONSUMER_KEY));
-		twitterConfBuilder.setOAuthConsumerSecret(properties.getProperty(Constants.OATH_CONSUMER_SECRET));
-		_twitterStream = new TwitterStreamFactory(twitterConfBuilder.build()).getInstance();
+		configurationBuilder.setOAuthAccessToken(properties.getProperty(Constants.OATH_ACCESS_TOKEN));
+		configurationBuilder.setOAuthAccessTokenSecret(properties.getProperty(Constants.OATH_ACCESS_TOKEN_SECRET));
+		configurationBuilder.setOAuthConsumerKey(properties.getProperty(Constants.OATH_CONSUMER_KEY));
+		configurationBuilder.setOAuthConsumerSecret(properties.getProperty(Constants.OATH_CONSUMER_SECRET));
+		_twitterStream = new TwitterStreamFactory(configurationBuilder.build()).getInstance();
 		_twitterStream.addListener(statusListener);
 
 		//Returns a small random sample of all public statuses.
@@ -90,12 +92,11 @@ public final class TwitterSpout extends BaseRichSpout {
 	public final void nextTuple() {
 		final Status status = _queue.poll();
 		if (null == status) {
-			//if _queue is empty sleep the spout thread so it doesn't consume resources
+			//if _queue is empty sleep the spout thread so it doesn't consume resources.
 			Utils.sleep(500);
         } else {
-			//LOGGER.info(status.getUser().getName() + " : " + status.getText());
 			final String language = status.getUser().getLang();
-			//Consider only English Language tweets, so that its easy to understand and also less input.
+			//Considering only English Language tweets, so that you are filtering input and sending less data to Bolt.
 			if(("en".equalsIgnoreCase(language)) && status.isRetweet()) {
 				final Status retweet = status.getRetweetedStatus();
 				_collector.emit(new Values(retweet));
@@ -107,13 +108,6 @@ public final class TwitterSpout extends BaseRichSpout {
 	public final void close() {
 		_twitterStream.shutdown();
 	}
-
-	/*@Override
-	public final Map<String, Object> getComponentConfiguration() {
-		final Config config = new Config();
-		config.setMaxTaskParallelism(1);
-		return config;
-	}*/
 
 	@Override
 	public final void ack(final Object id) {
@@ -128,3 +122,414 @@ public final class TwitterSpout extends BaseRichSpout {
 		declarer.declare(new Fields("retweet"));
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

@@ -23,12 +23,10 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="storm-top-retweets" />
-        <module name="storm-tweets-wordcount" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="storm-top-retweets" target="1.7" />
-      <module name="storm-tweets-wordcount" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

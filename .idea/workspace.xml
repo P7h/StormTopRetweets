@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="004da97a-e02b-4da5-8316-ec4d6444e1e3" name="Default" comment="" />
-    <ignored path="storm-tweets-wordcount.iws" />
+    <list default="true" id="506307eb-bb4d-4443-83a2-8c27e2a5326e" name="Default" comment="" />
+    <ignored path="storm-top-retweets.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370518483333" ignored="false" />
-    <file path="/WordCountTopology.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370548664697" ignored="false" />
-    <file path="/TwitterSpout.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370557600789" ignored="false" />
-    <file path="/WordCountBolt.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370557382472" ignored="false" />
-    <file path="/pom.xml" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370521747670" ignored="false" />
-    <file path="/WordSplitBolt.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370546039237" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/spouts/TwitterSpout.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370464340951" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/topology/UnshortenTopology.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370462694169" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/pom.xml" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370462912768" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/utils/Constants.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461802602" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/cassandra/schema/Schema.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461802602" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/resources/logback.xml" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461802602" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/bolts/CassandraBolt.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461850984" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/bolts/UnshortenBolt.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370462026541" ignored="false" />
-    <file path="/UnshortenBolt.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461896319" ignored="false" />
-    <file path="/Utils.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461915953" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/src/main/java/org/p7h/storm/urlshorten/utils/Utils.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370461932986" ignored="false" />
-    <file path="/UnshortenTopology.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370462693778" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsURLUnShortening/README.md" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370463950987" ignored="false" />
-    <file path="/Constants.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370540970562" ignored="false" />
-    <file path="/logback.xml" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370553265381" ignored="false" />
-    <file path="/RetweetCountBolt.java" changelist="004da97a-e02b-4da5-8316-ec4d6444e1e3" time="1370556136239" ignored="false" />
+    <file path="$PROJECT_DIR$/src/main/resources/logback.xml" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1370673659685" ignored="false" />
+    <file path="/RetweetCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1370710039636" ignored="false" />
+    <file path="/TopRetweetsTopology.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1370709754730" ignored="false" />
+    <file path="/TwitterSpout.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1370709890169" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +22,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -77,28 +58,29 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="storm-tweets-wordcount" />
+    <favorites_list name="storm-top-retweets" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TopRetweetsTopology.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java">
+      <file leaf-file-name="RetweetCountBolt.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="57" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.1857001">
-              <folding />
+            <state line="54" column="31" selection-start="1978" selection-end="1978" vertical-scroll-proportion="-0.5776">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
+                <element signature="docComment;field#retweetCountComparator#0;class#RetweetCountBolt#0" expanded="true" />
+                <element signature="e#930#1182#0" expanded="true" />
+                <element signature="e#944#971#0" expanded="true" />
+                <element signature="e#1176#1177#0" expanded="true" />
+                <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
+                <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,31 +88,16 @@
       <file leaf-file-name="TwitterSpout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="5" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
+            <state line="77" column="54" selection-start="2370" selection-end="2395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RetweetCountBolt.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java">
+      <file leaf-file-name="TopRetweetsTopology.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="25" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
-                <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
-                <element signature="docComment;field#logCountThreshold#0;class#RetweetCountBolt#0" expanded="true" />
-                <element signature="e#1981#2140#0" expanded="true" />
-                <element signature="e#2124#2125#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logback.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="30" selection-start="404" selection-end="404" vertical-scroll-proportion="-6.5384617">
+            <state line="23" column="18" selection-start="826" selection-end="832" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,24 +113,18 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/bolts/WordCountBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/wordcount/topology/WordCountTopology.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/WordCountBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="dedicatedModuleDir" value="D:\Prashanth\GitHub\StormTopRetweets" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
@@ -171,8 +132,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="22" />
-    <option name="width" value="2064" />
-    <option name="height" value="1138" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -208,7 +169,7 @@
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
-      <flattenPackages ProjectPane="false" />
+      <flattenPackages />
       <showMembers />
       <showModules />
       <showLibraryContents />
@@ -220,17 +181,18 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -240,7 +202,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -255,14 +217,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -292,7 +250,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -322,7 +280,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -352,7 +310,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storm-tweets-wordcount" />
+              <option name="myItemId" value="storm-top-retweets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -382,14 +340,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="Errors" />
     <property name="MemberChooser.sorted" value="false" />
@@ -398,21 +354,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Prashanth\GitHub\StormTweetsWordCount\src\main\java\org\p7h\storm\wordcount\utils" />
-    </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="org.p7h.storm.wordcount.utils.Constants" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.p7h.storm.wordcount" />
-      <recent name="org.p7h.storm.wordcount.spouts" />
-      <recent name="org.p7h.storm.wordcount.bolts" />
-    </key>
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -459,13 +402,12 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SpellCheckerSettings" BundledDictionaries="3" BundledDictionary0="jetbrains.dic" BundledDictionary1="english.dic" BundledDictionary2="css.dic" Folders="0" Dictionaries="0" />
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="2064" height="1138" extended-state="6" />
+    <frame x="-8" y="22" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -477,11 +419,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16433567" sideWeight="0.67182964" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="92" y="122" width="1864" height="938" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -547,193 +489,66 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="30" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/storm/storm/0.8.2/storm-0.8.2.jar!/backtype/storm/task/TopologyContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.14529915" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Warez/Java/JDK7/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="19" selection-start="3638" selection-end="3638" vertical-scroll-proportion="0.1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Warez/Java/JDK7/src.zip!/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="19" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$M2_REPO$/org/twitter4j/twitter4j-stream/3.0.3/twitter4j-stream-3.0.3.jar!/twitter4j/TwitterStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="9" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.53556913" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Warez/BuildTools/Maven-3.0.5/lib/maven-model-builder-3.0.5.jar!/org/apache/maven/model/pom-4.0.0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="8" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.5147808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="31" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-0.5025484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="404" selection-end="404" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="5" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="25" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.0">
+        <state line="83" column="35" selection-start="3193" selection-end="3212" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="docComment;field#retweetCountComparator#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#930#1182#0" expanded="true" />
+            <element signature="e#944#971#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
-            <element signature="docComment;field#logCountThreshold#0;class#RetweetCountBolt#0" expanded="true" />
-            <element signature="e#1981#2140#0" expanded="true" />
-            <element signature="e#2124#2125#0" expanded="true" />
+            <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java">
+    <entry file="jar://$M2_REPO$/org/twitter4j/twitter4j-core/3.0.3/twitter4j-core-3.0.3-sources.jar!/twitter4j/Status.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="57" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0">
+        <state line="25" column="23" selection-start="788" selection-end="788" vertical-scroll-proportion="0.1904">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.1857001">
+        <state line="7" column="13" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0816">
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Esper_Lib</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>6.0_45</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>storm-tweets-wordcount</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>7.0_21</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2570694" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: backtype:jzmq:2.1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="54" selection-start="2370" selection-end="2395" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="18" selection-start="826" selection-end="832" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="31" selection-start="1978" selection-end="1978" vertical-scroll-proportion="-0.5776">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="docComment;field#retweetCountComparator#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#930#1182#0" expanded="true" />
+            <element signature="e#944#971#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
+            <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 

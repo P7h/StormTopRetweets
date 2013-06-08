@@ -7,11 +7,7 @@ import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Tuple;
-import com.google.common.base.Supplier;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import twitter4j.Status;
@@ -22,91 +18,90 @@ import twitter4j.Status;
  * @author - Prashanth Babu
  */
 public final class RetweetCountBolt extends BaseRichBolt {
-    private static final Logger LOGGER = LoggerFactory.getLogger(RetweetCountBolt.class);
-	private static final long serialVersionUID = 2470249820632322227L;
-	/** Interval between logging the output. */
-    private final long logIntervalInSeconds;
-	/** Log only the retweets which crosses this threshold value. */
-	private final long logCountThreshold;
+	private static final Logger LOGGER = LoggerFactory.getLogger(RetweetCountBolt.class);
+	private static final long serialVersionUID = 2161646804610027045L;
+	/**
+	 * For sorting the tweets on the # of retweets a particular tweet has got.
+	 */
+	private final static Comparator<Map.Entry<String, Status>> retweetCountComparator =
+			new Comparator<Map.Entry<String, Status>>() {
+				public int compare(Map.Entry<String, Status> status01, Map.Entry<String, Status> status02) {
+					return (int) (status02.getValue().getRetweetCount() - status01.getValue().getRetweetCount());
+				}
+			};
+	/**
+	 * Interval between logging the output.
+	 */
+	private final long logIntervalInSeconds;
+	/**
+	 * Log only the retweets which crosses this threshold value.
+	 */
+	private final long rankMaxThreshold;
 
 	private long lastLoggedTimestamp;
-	private Map<String, Status> retweetCountTracker;
-	private Multimap<Long, Status> frequencyOfRetweets;
-	private long runCounter;
+	private SortedMap<String, Status> retweetCountTracker;
+	private long logFrequencyCounter;
 
-    public RetweetCountBolt(final long logIntervalInSeconds, final long logCountThreshold) {
-        this.logIntervalInSeconds = logIntervalInSeconds;
-	    this.logCountThreshold = logCountThreshold;
-    }
+	public RetweetCountBolt(final long logIntervalInSeconds, final long rankMaxThreshold) {
+		this.logIntervalInSeconds = logIntervalInSeconds;
+		this.rankMaxThreshold = rankMaxThreshold;
+	}
 
-    @Override
-    public final void prepare(final Map map, final TopologyContext topologyContext,
-                              final OutputCollector collector) {
-        lastLoggedTimestamp = System.currentTimeMillis();
-	    retweetCountTracker = Maps.newHashMap();
-	    //Doing this circus so that the output is in a proper ascending order of the calculated count of retweets.
-	    frequencyOfRetweets = Multimaps.newListMultimap(
-             new TreeMap<Long, Collection<Status>>(), new Supplier<List<Status>>() {
-                 public List<Status> get() {
-                     return Lists.newArrayList();
-                 }
-             }
-	    );
-    }
+	@Override
+	public final void prepare(final Map map, final TopologyContext topologyContext,
+	                          final OutputCollector collector) {
+		lastLoggedTimestamp = System.currentTimeMillis();
+		retweetCountTracker = Maps.newTreeMap();
+		logFrequencyCounter = 0;
+	}
 
-    @Override
-    public final void declareOutputFields(final OutputFieldsDeclarer outputFieldsDeclarer) {
-    }
+	@Override
+	public final void declareOutputFields(final OutputFieldsDeclarer outputFieldsDeclarer) {
+	}
 
-    @Override
-    public final void execute(final Tuple input) {
-	    final Status retweet = (Status) input.getValueByField("retweet");
-	    final String screenName = retweet.getUser().getScreenName();
-	    retweetCountTracker.put(screenName, retweet);
+	@Override
+	public final void execute(final Tuple input) {
+		final Status retweet = (Status) input.getValueByField("retweet");
+		final String screenName = retweet.getUser().getScreenName();
+		retweetCountTracker.put(screenName, retweet);
 
-	    final long timestampNow = System.currentTimeMillis();
-	    final long logPeriodInSeconds = (timestampNow - lastLoggedTimestamp) / 1000;
-        if (logPeriodInSeconds > logIntervalInSeconds) {
-	        ++runCounter;
-	        logRetweetCount();
-            lastLoggedTimestamp = timestampNow;
-        }
-    }
+		final long timestampNow = System.currentTimeMillis();
+		final long logPeriodInSeconds = (timestampNow - lastLoggedTimestamp) / 1000;
+		if (logPeriodInSeconds > logIntervalInSeconds) {
+			logRetweetCount();
+			lastLoggedTimestamp = timestampNow;
+		}
+	}
 
-    private final void logRetweetCount() {
-	    long count;
-	    Status status;
-	    //Group retweets based on the Status and the count into a Multimap
-	    for (Map.Entry<String, Status> entry : retweetCountTracker.entrySet()) {
-		    status = entry.getValue();
-	        count = status.getRetweetCount();
-		    if (logCountThreshold < count) {
-		        frequencyOfRetweets.put(count, status);
-		    }
-	    }
+	private final void logRetweetCount() {
+		Status status;
+		final StringBuilder dumpRetweetInfoToLog = new StringBuilder();
+		//Doing this circus so that we get sort the Map on the basis of # of retweets a tweets got.
+		final List<Map.Entry<String, Status>> list = new ArrayList<>(retweetCountTracker.entrySet());
+		Collections.sort(list, retweetCountComparator);
+		int rankingTracker = 0;
+		for (Map.Entry<String, Status> entry : list) {
+			status = entry.getValue();
+			dumpRetweetInfoToLog.append(status.getRetweetCount())
+					.append(" ==> @")
+					.append(status.getUser().getScreenName())
+					.append(" | ")
+					.append(status.getId())
+					.append(" | ")
+					.append(status.getText().replaceAll("\n", " "))
+					.append("\n");
+			rankingTracker++;
+			if (rankingTracker == rankMaxThreshold) {
+				break;
+			}
+		}
 
-	    final StringBuilder dumpRetweetInfoToLog = new StringBuilder();
+		++logFrequencyCounter;
+		LOGGER.info("At {}, total # of retweeted tweets received in run#{}: {} ", new Date(),
+				           logFrequencyCounter, retweetCountTracker.size());
+		LOGGER.info("\n{}", dumpRetweetInfoToLog.toString());
 
-	    Collection<Status> statuses;
-	    for (final Long key: frequencyOfRetweets.keySet()) {
-		    statuses = frequencyOfRetweets.get(key);
-		    for(Status statusToLog: statuses) {
-			    dumpRetweetInfoToLog.append(key)
-					    .append(" ==> @")
-					    .append(statusToLog.getUser().getScreenName())
-					    .append(" | ")
-					    .append(statusToLog.getId())
-					    .append(" | ")
-					    .append(statusToLog.getText().replaceAll("\n", " "))
-					    .append("\n");
-		    }
-	    }
-	    LOGGER.info("At {}, total # of retweeted tweets received in run#{}: {} ", new Date(),
-			               runCounter, retweetCountTracker.size());
-	    LOGGER.info("\n{}", dumpRetweetInfoToLog.toString());
-
-	    // Empty frequency and retweetCountTracker Maps for futher iterations.
-        retweetCountTracker.clear();
-	    frequencyOfRetweets.clear();
-    }
+		// Empty retweetCountTracker Maps for further iterations.
+		retweetCountTracker.clear();
+	}
 }
