@@ -4,18 +4,19 @@
     <list default="true" id="506307eb-bb4d-4443-83a2-8c27e2a5326e" name="Default" comment="" />
     <ignored path="storm-top-retweets.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/RetweetCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371189278928" ignored="false" />
+    <file path="/RetweetCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371249401443" ignored="false" />
     <file path="/TopRetweetsTopology.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1370709754730" ignored="false" />
     <file path="/TwitterSpout.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371190748213" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/bolts/WordCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371190908810" ignored="false" />
-    <file path="/WordCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371190899079" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/bolts/WordCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371249876167" ignored="false" />
+    <file path="/WordCountBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371249872080" ignored="false" />
     <file path="/Test.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371102404042" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsWordCount/StormTweetsWordCount.log" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371191597245" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTweetsWordCount/StormTweetsWordCount.log" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371248990308" ignored="false" />
     <file path="/RetweetCountComparator.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371189910551" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371189766258" ignored="false" />
-    <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371190734805" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/bolts/WordSplitBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371243359204" ignored="false" />
+    <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/spouts/TwitterSpout.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371239466683" ignored="false" />
     <file path="$PROJECT_DIR$/../StormTweetsWordCount/src/main/java/org/p7h/storm/wordcount/utils/Constants.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371189375390" ignored="false" />
-    <file path="/WordSplitBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371189766258" ignored="false" />
+    <file path="/WordSplitBolt.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371243350782" ignored="false" />
+    <file path="/RetweetsOrdering.java" changelist="506307eb-bb4d-4443-83a2-8c27e2a5326e" time="1371239261400" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,53 @@
     <favorites_list name="storm-top-retweets" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="RetweetCountBolt.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="46" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.1024">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
+                <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
+                <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+                <element signature="e#3152#3734#0" expanded="true" />
+                <element signature="e#3729#3730#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logback.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="41" selection-start="415" selection-end="415" vertical-scroll-proportion="-4.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RetweetsOrdering.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/RetweetsOrdering.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="2" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitterSpout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="13" selection-start="3875" selection-end="3875" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -87,8 +134,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/RetweetCountComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/RetweetCountComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/RetweetsOrdering.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java" />
       </list>
     </option>
@@ -154,7 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,6 +364,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -334,9 +382,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.Test">
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
@@ -407,7 +455,7 @@
   <component name="SpellCheckerSettings" BundledDictionaries="3" BundledDictionary0="jetbrains.dic" BundledDictionary1="english.dic" BundledDictionary2="css.dic" Folders="0" Dictionaries="0" />
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -423,7 +471,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.225" sideWeight="0.98767334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.225" sideWeight="0.98767334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -506,6 +554,8 @@
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#3152#3734#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -518,6 +568,8 @@
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#3152#3734#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -530,6 +582,8 @@
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#3152#3734#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -549,6 +603,8 @@
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#3152#3734#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -568,6 +624,8 @@
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#3152#3734#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,31 +654,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/RetweetCountComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="438" selection-end="438" vertical-scroll-proportion="0.4352">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#RetweetCountComparator#0" expanded="true" />
-          </folding>
+        <state line="120" column="13" selection-start="3875" selection-end="3875" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/spouts/TwitterSpout.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="955" selection-end="955" vertical-scroll-proportion="0.19444445">
+        <state line="10" column="41" selection-start="415" selection-end="415" vertical-scroll-proportion="-4.576923">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/utils/RetweetsOrdering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="2" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/p7h/storm/retweets/bolts/RetweetCountBolt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="27" selection-start="3578" selection-end="3597" vertical-scroll-proportion="0.8704">
+        <state line="83" column="46" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.1024">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#logIntervalInSeconds#0;class#RetweetCountBolt#0" expanded="true" />
             <element signature="docComment;field#rankMaxThreshold#0;class#RetweetCountBolt#0" expanded="true" />
+            <element signature="e#3152#3734#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
           </folding>
         </state>
       </provider>
