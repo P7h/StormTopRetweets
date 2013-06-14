@@ -65,7 +65,7 @@ In distributed mode, after starting Nimbus and Supervisors on individual machine
     storm jar target/storm-top-retweets-0.1-jar-with-dependencies.jar org.p7h.storm.retweets.topology.TopRetweetsTopology TopRetweets
 
 ## Problems
-If you find any issues, please report them either raising an [issue](https://github.com/P7h/StormTopRetweets/issues) here on Github or alert me on my Twitter handle [@P7h](http://twitter.com/P7h). Or even better, please send a [pull request](https://github.com/P7h/StormTopRetweets/pulls).
+If you find any issues, please report them either raising an [issue](https://github.com/P7h/StormTopRetweets/issues) here on GitHub or alert me on my Twitter handle [@P7h](http://twitter.com/P7h). Or even better, please send a [pull request](https://github.com/P7h/StormTopRetweets/pulls).
 Appreciate your help. Thanks!
 
 ## License
