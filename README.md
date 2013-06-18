@@ -2,10 +2,10 @@
 ----------
 
 ## Introduction
-This repository contains an application which is built to demonstrate as an example of Storm distributed framework by counting the most retweeted tweets in real-time.
+This repository contains an application for demonstrating Storm distributed framework by counting the most retweeted tweets in real-time.
 
-[Storm](http://storm-project.net) is a free and open source distributed realtime computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter [post BackType acquisition] in August, 2011.<br>
-This application has been developed and tested with Storm v0.8.2 on CentOS. Application may or may not work with earlier or later versions than Storm v0.8.2.<br>
+[Storm](http://storm-project.net) is a free and open source distributed real-time computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter [post BackType acquisition] in August, 2011.<br>
+This application has been developed and tested with Storm v0.8.2 on CentOS and Windows 7. Application may or may not work with earlier or later versions than Storm v0.8.2.<br>
 
 This application has been tested in:<br>
 
@@ -13,15 +13,15 @@ This application has been tested in:<br>
 + Cluster mode on a private cluster and also on Amazon EC2 environment of 4 machines and 5 machines respectively; with all the machines in private cluster running Ubuntu while EC2 environment machines were powered by CentOS.
 
 ## Features
-* Application retrieves tweets from Twitter stream (using [Twitter4J](http://twitter4j.org)) and in real-time processes only the English language tweets.<br>
-* It keeps stats of the most retweeted tweets in every 30 seconds.
-* After processing, the application logs the count and retweet related info grouped by their count to the console and also to a log file.<br>
-* As of current day, this codebase has very minimal comments. I will be adding more comments as and when I get time.
+* Application retrieves tweets from Twitter stream (using [Twitter4J](http://twitter4j.org)) and in real-time processes only the tweets in English language.<br>
+* It computes stats of the most retweeted tweets every 30 seconds.
+* After processing, the application logs the count and retweet related info grouped by their count to the console and also to a log file using Logback.<br>
+* In local mode, topology runs for 2 minutes and then shuts down. Topology run can be updated by modifying [this](src/main/java/org/p7h/storm/retweets/topology/TopRetweetsTopology.java#L45) value.<br>
 * Also this project has been made compatible with both Eclipse IDE and IntelliJ IDEA. Import the project in your favorite IDE [which has Maven plugin installed] and you can quickly follow the code.
 
 ## Configuration
 Please check the [`config.properties`](src/main/resources/config.properties) and add your own values and complete the integration of Twitter API to your application by looking at your values from [Twitter Developer Page](https://dev.twitter.com/apps).<br>
-If you did not create a Twitter App before, then please create a new Twitter App where you will get all the required values of `config.properties` afresh and then populate them here without any mistake.<br>
+If you did not create a Twitter App before, then please create a new Twitter App after which you will get all the required values of `config.properties` and then populate them here without any mistake.<br>
 
 ## Dependencies
 * Storm v0.8.2
