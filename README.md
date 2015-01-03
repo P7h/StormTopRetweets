@@ -4,7 +4,7 @@
 ## Introduction
 This repository contains an application for demonstrating Apache Storm distributed framework by counting the most retweeted tweets in real-time.
 
-[Apache Storm](http://storm.apache.org) is an open source distributed real-time computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter [post BackType acquisition] in August, 2011. And became a top level project in Apache on 29<sup>th</sup> September, 2014.<br>
+[Apache Storm](http://storm.apache.org) is an open source distributed real-time computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter [post BackType acquisition] in August, 2011. And Storm became a [top level project in Apache](https://blogs.apache.org/foundation/entry/the_apache_software_foundation_announces64) on 29<sup>th</sup> September, 2014.<br>
 This application has been developed and tested initially with Storm v0.8.2 on Windows 7 in local mode; and was eventually updated and tested with Storm v0.9.3 on 31<sup>st</sup> December, 2014. Application may or may not work with earlier or later versions than Storm v0.9.3.<br>
 
 This application has been tested in:<br>
